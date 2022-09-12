@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.black,
       ),
-      home: const MyHomePage(title: 'Gym.exe'),
+      home: const MyHomePage(title: 'Ticket4U'),
     );
   }
 }
