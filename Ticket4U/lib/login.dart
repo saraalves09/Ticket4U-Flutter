@@ -12,6 +12,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 0, 0, 0),
       body: Column(
         children: [
           Expanded(
@@ -34,10 +35,10 @@ class _LoginState extends State<Login> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Entrar'.toUpperCase(),
-                        style: Theme.of(context).textTheme.headline4,
-                      ),
+                      Text('Entrar'.toUpperCase(),
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
                       Text(
                         'Cadastre-Se'.toUpperCase(),
                         style: Theme.of(context).textTheme.button,
@@ -49,17 +50,29 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.only(bottom: 10.0),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
+                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 15),
                           child: Icon(
                             Icons.alternate_email,
-                            color: Colors.primaries.first,
+                            color: Colors.purple,
                           ),
                         ),
                         const Expanded(
+                          // ignore: sort_child_properties_last
                           child: TextField(
-                            decoration: InputDecoration(labelText: 'E-mail'),
+                            style: TextStyle(color: Colors.white),
+                            cursorColor: Colors.white,
+                            decoration: InputDecoration(
+                              labelText: 'E-mail',
+                              labelStyle: TextStyle(color: Colors.white),
+                              focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 2,
+                              )),
+                            ),
                             keyboardType: TextInputType.emailAddress,
                           ),
                         )
@@ -68,17 +81,28 @@ class _LoginState extends State<Login> {
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
+                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 15),
+                      const Padding(
+                        padding: EdgeInsets.only(right: 15),
                         child: Icon(
                           Icons.lock,
-                          color: Colors.primaries.first,
+                          color: Colors.purple,
                         ),
                       ),
                       const Expanded(
                         child: TextField(
-                          decoration: InputDecoration(labelText: 'Senha'),
+                          style: TextStyle(color: Colors.white),
+                          cursorColor: Colors.white,
+                          decoration: InputDecoration(
+                            labelText: 'Senha',
+                            labelStyle: TextStyle(color: Colors.white),
+                            focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                              color: Colors.white,
+                              width: 2,
+                            )),
+                          ),
                           obscureText: true,
                         ),
                       )
@@ -94,12 +118,13 @@ class _LoginState extends State<Login> {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: Colors.white.withOpacity(.5),
+                              color: Colors.purple,
                             ),
                           ),
+                          // ignore: prefer_const_constructors
                           child: Icon(
                             Typicons.social_twitter,
-                            color: Colors.white.withOpacity(.5),
+                            color: Colors.purple,
                           ),
                         ),
                         const SizedBox(width: 15),
@@ -108,20 +133,20 @@ class _LoginState extends State<Login> {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
-                              color: Colors.white.withOpacity(.5),
+                              color: Colors.purple,
                             ),
                           ),
-                          child: Icon(
+                          child: const Icon(
                             Typicons.social_youtube,
-                            color: Colors.white.withOpacity(.5),
+                            color: Colors.purple,
                           ),
                         ),
                         const Spacer(),
                         Container(
-                          padding: EdgeInsets.all(15),
+                          padding: const EdgeInsets.all(15),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.primaries.first,
+                            color: Colors.purple,
                           ),
                           child: Icon(
                             Icons.arrow_forward_ios,

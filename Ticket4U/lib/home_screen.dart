@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:gym_exe/login.dart';
+import './login.dart';
 
 class Splash extends StatefulWidget {
   @override
