@@ -1,3 +1,4 @@
+import 'package:Ticket4U/details_ticket.dart';
 import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 
@@ -142,17 +143,26 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         const Spacer(),
-                        Container(
-                          padding: const EdgeInsets.all(15),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.purple,
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.all(15),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.purple,
+                            ),
+                            child: Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.black,
+                            ),
                           ),
-                          child: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black,
-                          ),
-                        )
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DetailsTicket()),
+                            );
+                          },
+                        ),
                       ],
                     ),
                   )

@@ -20,6 +20,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           backgroundColor: Color.fromARGB(255, 0, 0, 0),
         ),
-        body: listTickets());
+        body: ListTickets());
   }
 }
