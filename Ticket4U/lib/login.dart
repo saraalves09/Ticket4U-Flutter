@@ -159,7 +159,7 @@ class _LoginState extends State<Login> {
                               color: Colors.purple,
                             ),
                             child: Icon(
-                              Icons.arrow_forward_ios,
+                              Icons.arrow_forward,
                               color: Colors.black,
                             ),
                           ),
