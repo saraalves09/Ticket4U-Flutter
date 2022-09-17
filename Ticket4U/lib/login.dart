@@ -1,5 +1,4 @@
-import 'package:Ticket4U/buy_ticket.dart';
-import 'package:Ticket4U/details_ticket.dart';
+import 'package:Ticket4U/list_tickets.dart';
 import 'package:Ticket4U/register_login.dart';
 import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
@@ -166,8 +165,7 @@ class _LoginState extends State<Login> {
                           onTap: (() => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const DetailsTicket()),
+                                    builder: (context) => const ListTickets()),
                               )),
                         ),
                       ],
