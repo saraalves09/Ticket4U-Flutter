@@ -1,4 +1,6 @@
+import 'package:Ticket4U/buy_ticket.dart';
 import 'package:Ticket4U/details_ticket.dart';
+import 'package:Ticket4U/register_login.dart';
 import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 
@@ -33,18 +35,24 @@ class _LoginState extends State<Login> {
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('Entrar'.toUpperCase(),
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold)),
-                      Text(
-                        'Cadastre-Se'.toUpperCase(),
-                        style: Theme.of(context).textTheme.button,
-                      ),
-                    ],
+                  InkWell(
+                    // ignore: sort_child_properties_last
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Entrar'.toUpperCase(),
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold)),
+                        Text('Cadastre-Se'.toUpperCase(),
+                            style: const TextStyle(color: Colors.white)),
+                      ],
+                    ),
+                    onTap: (() => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegisterLogin()),
+                        )),
                   ),
                   Spacer(),
                   Padding(
@@ -155,13 +163,12 @@ class _LoginState extends State<Login> {
                               color: Colors.black,
                             ),
                           ),
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const DetailsTicket()),
-                            );
-                          },
+                          onTap: (() => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const DetailsTicket()),
+                              )),
                         ),
                       ],
                     ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './login.dart';
+import 'login_or_register.dart';
 
 class Splash extends StatefulWidget {
   @override
@@ -15,14 +16,14 @@ class _SplashState extends State<Splash> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     Future.delayed(Duration(seconds: 3)).then((_) {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Login()));
+          context, MaterialPageRoute(builder: (context) => RegisterOrLogin()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.green,
+        color: Colors.black,
         child: Center(
           child: Container(
             width: MediaQuery.of(context).size.width,

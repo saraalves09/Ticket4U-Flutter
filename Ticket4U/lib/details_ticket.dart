@@ -15,65 +15,96 @@ class _DetailsTicket extends State<DetailsTicket> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      backgroundColor: Colors.pink,
-      body: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(15),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("imgs/background.jpg"),
+            fit: BoxFit.cover,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text(ticket1,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ))
-            ],
-          ),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            width: 300,
-            height: 200,
-            child: Image.asset("imgs/ticket1.jpg"),
-          ),
-          Container(
-            child: const Center(child: Text("Data: " + ticket1_data)),
-          ),
-          Container(
-            child: const Center(child: Text("Local: " + ticket_local)),
-          ),
-          Container(
-            child: const Center(child: Text("Valor: " + ticket1_valor)),
-          ),
-          Container(
-            child: const Center(child: Text("")),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                child: const Text('Comprar ingresso'),
-                onPressed: () {
-                  //Navigator.push(
-                  //context,
-                  //MaterialPageRoute(builder: (context) => const BuyTicket()),
-                  //);
-                },
-              ),
-              ElevatedButton(
-                child: const Text('Cancelar'),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ListTickets()),
-                  );
-                },
-              ),
-            ],
-          )
-        ],
+        ),
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.all(15),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text(ticket1,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 20,
+                    ))
+              ],
+            ),
+            Container(
+              padding: const EdgeInsets.all(10.0),
+              width: 300,
+              height: 200,
+              child: Image.asset("imgs/ticket1.jpg"),
+            ),
+            Container(
+              child: const Center(
+                  child: Text("Data: " + ticket1_data,
+                      style: TextStyle(color: Colors.white))),
+            ),
+            Container(
+              child: const Center(
+                  child: Text("Local: " + ticket_local,
+                      style: TextStyle(color: Colors.white))),
+            ),
+            Container(
+              child: const Center(
+                  child: Text("Valor: " + ticket1_valor,
+                      style: TextStyle(color: Colors.white))),
+            ),
+            Container(
+              child: const Center(
+                  child: Text("", style: TextStyle(color: Colors.white))),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  child: const Text('Comprar ingresso'),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.purple,
+                      minimumSize: Size(150, 40),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      )),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const BuyTicket()),
+                    );
+                  },
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 8),
+                  child: ElevatedButton(
+                    child: const Text('Cancelar'),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 219, 100, 100),
+                        minimumSize: Size(150, 40),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        )),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ListTickets()),
+                      );
+                    },
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
