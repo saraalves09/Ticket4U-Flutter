@@ -165,7 +165,7 @@ class _ListTickets extends State<ListTickets> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                     child: Text(
-                      "Pela 8° em tour, dessa vez com 9 shows no Brasil!!", 
+                      "Pela 8", 
                       style: TextStyle(fontSize: 17),
                       textAlign: TextAlign.center,),),
                     ButtonBar(
@@ -181,7 +181,7 @@ class _ListTickets extends State<ListTickets> {
                           Navigator.push(
                              context,
                           MaterialPageRoute(
-                           builder: (context) => const BuyTicket()),);
+                           builder: (context) => const DetailsTicket()),);
                     },
                         child: const Text("Comprar")
                         ),

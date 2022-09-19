@@ -181,7 +181,7 @@ class _ListTickets extends State<ListTickets> {
                           Navigator.push(
                              context,
                           MaterialPageRoute(
-                           builder: (context) => const BuyTicket()),);
+                           builder: (context) => const Buy()),);
                     },
                         child: const Text("Comprar")
                         ),

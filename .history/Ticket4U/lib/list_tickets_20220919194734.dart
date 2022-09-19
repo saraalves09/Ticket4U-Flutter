@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:Ticket4U/buy_ticket.dart';
 import 'package:Ticket4U/details_ticket.dart';
 import 'package:Ticket4U/login.dart';
 import 'package:flutter/material.dart';
@@ -71,7 +70,7 @@ class _ListTickets extends State<ListTickets> {
                           Navigator.push(
                              context,
                           MaterialPageRoute(
-                           builder: (context) => const BuyTicket()),);
+                           builder: (context) => const DetailsTicket()),);
                     },
                         child: const Text("Comprar")
                         ),
@@ -126,7 +125,7 @@ class _ListTickets extends State<ListTickets> {
                           Navigator.push(
                              context,
                           MaterialPageRoute(
-                           builder: (context) => const BuyTicket()),);
+                           builder: (context) => const Buy),);
                     },
                         child: const Text("Comprar")
                         ),
@@ -148,24 +147,24 @@ class _ListTickets extends State<ListTickets> {
                     ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(9.0)),
                       child: Image.asset(
-                        'imgs/ticket3.jpg',
+                        'imgs/ticket1.jpg',
                         // width: 300,
                         height: 150,
                         fit: BoxFit.fitWidth,
                       ),
                     ),
                     ListTile(
-                      title: const Text("Coldplay",
+                      title: const Text("Henrique & Juliano",
                           style: TextStyle(fontSize: 35, color: Colors.purple),
                           textAlign: TextAlign.center),
                       subtitle: Text(
-                        "Music of the Spheres World Tour",
+                        "Turnê SURREAL",
                         style: TextStyle(color: Colors.black26),
                         textAlign: TextAlign.center),),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                     child: Text(
-                      "Pela 8° em tour, dessa vez com 9 shows no Brasil!!", 
+                      "A dupla que arrasta MILHÕES", 
                       style: TextStyle(fontSize: 17),
                       textAlign: TextAlign.center,),),
                     ButtonBar(
@@ -181,7 +180,7 @@ class _ListTickets extends State<ListTickets> {
                           Navigator.push(
                              context,
                           MaterialPageRoute(
-                           builder: (context) => const BuyTicket()),);
+                           builder: (context) => const DetailsTicket()),);
                     },
                         child: const Text("Comprar")
                         ),

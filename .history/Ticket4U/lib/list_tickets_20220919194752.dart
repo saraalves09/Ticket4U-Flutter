@@ -155,17 +155,17 @@ class _ListTickets extends State<ListTickets> {
                       ),
                     ),
                     ListTile(
-                      title: const Text("Coldplay",
+                      title: const Text("Henrique & Juliano",
                           style: TextStyle(fontSize: 35, color: Colors.purple),
                           textAlign: TextAlign.center),
                       subtitle: Text(
-                        "Music of the Spheres World Tour",
+                        "Turnê SURREAL",
                         style: TextStyle(color: Colors.black26),
                         textAlign: TextAlign.center),),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                     child: Text(
-                      "Pela 8° em tour, dessa vez com 9 shows no Brasil!!", 
+                      "A dupla que arrasta MILHÕES", 
                       style: TextStyle(fontSize: 17),
                       textAlign: TextAlign.center,),),
                     ButtonBar(
@@ -181,7 +181,7 @@ class _ListTickets extends State<ListTickets> {
                           Navigator.push(
                              context,
                           MaterialPageRoute(
-                           builder: (context) => const BuyTicket()),);
+                           builder: (context) => const DetailsTicket()),);
                     },
                         child: const Text("Comprar")
                         ),
