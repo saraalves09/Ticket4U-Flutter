@@ -8,6 +8,7 @@ class Splash extends StatefulWidget {
   // ignore: library_private_types_in_public_api
   _SplashState createState() => _SplashState();
 }
+
 class _SplashState extends State<Splash> {
   @override
   void initState() {
@@ -18,6 +19,7 @@ class _SplashState extends State<Splash> {
           context, MaterialPageRoute(builder: (context) => RegisterOrLogin()));
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(

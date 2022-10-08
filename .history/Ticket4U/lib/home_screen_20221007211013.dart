@@ -18,6 +18,7 @@ class _SplashState extends State<Splash> {
           context, MaterialPageRoute(builder: (context) => RegisterOrLogin()));
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(

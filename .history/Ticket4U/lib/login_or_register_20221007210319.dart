@@ -8,6 +8,7 @@ class RegisterOrLogin extends StatefulWidget {
   @override
   State<RegisterOrLogin> createState() => _RegiRegisterOrLoginsterLogin();
 }
+
 class _RegiRegisterOrLoginsterLogin extends State<RegisterOrLogin> {
   @override
   Widget build(BuildContext context) {
